@@ -8,7 +8,8 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class EmployeesVm {
-	
+
+	private long id;
 	private long empId;
 	private String email;
 	private String name;

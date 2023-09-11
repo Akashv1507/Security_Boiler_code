@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class RegistrationModel {
-	
+
 	private long empId;
 	private String email;
 	private String name;

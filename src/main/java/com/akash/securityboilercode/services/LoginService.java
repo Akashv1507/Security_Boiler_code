@@ -1,11 +1,13 @@
 package com.akash.securityboilercode.services;
 
+import java.util.List;
+
 import com.akash.securityboilercode.model.RegisterResult;
 import com.akash.securityboilercode.model.RegistrationModel;
 
 public interface LoginService {
 
-	RegisterResult registerUser(RegistrationModel registraionData);
+	public RegisterResult registerUser(RegistrationModel registraionData);
+	public List<String> getRolesList();
 
-	
 }

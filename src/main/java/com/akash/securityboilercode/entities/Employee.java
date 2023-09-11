@@ -3,7 +3,7 @@ package com.akash.securityboilercode.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,28 +23,29 @@ import lombok.Setter;
 @Setter
 public class Employee {
 
-	
+
 	/*
 	 * Reference for many to many mapping https://www.baeldung.com/jpa-many-to-many
 	 */
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private long id;
+	@Column(unique=true)
 	private long empId;
 	private String email;
 	private String name;
 	private String password;
 
-	
+
 	/* @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE }) */
-	@ManyToMany() 
+	@ManyToMany()
 	@JoinTable(name = "employee_roles", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
-	private List<Role> empRoles = new ArrayList<Role>();
-	
+	private List<Role> empRoles = new ArrayList<>();
+
 	/*
 	 * public void adddEmpRoles(Role empRole) {
-	 * 
+	 *
 	 * this.empRoles.add(empRole); }
 	 */
-	
+
 }

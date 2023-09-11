@@ -11,10 +11,10 @@ import com.akash.securityboilercode.repository.EmployeeRepository;
 public class ContactController {
 	@Autowired
 	EmployeeRepository repo;
-	
-	@GetMapping("/contact")	
+
+	@GetMapping("/contact")
 	public String contact() {
 		return "this is a contact page";
 	}
-	
+
 }

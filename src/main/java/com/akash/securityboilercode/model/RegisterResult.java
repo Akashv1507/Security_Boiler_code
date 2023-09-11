@@ -9,5 +9,5 @@ import lombok.Getter;
 @Getter
 public class RegisterResult {
 	private String msg;
-	private HttpStatus status; 
+	private HttpStatus status;
 }

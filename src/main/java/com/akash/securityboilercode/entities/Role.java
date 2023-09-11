@@ -3,7 +3,6 @@ package com.akash.securityboilercode.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -32,5 +31,5 @@ public class Role {
 	}
 
 	@ManyToMany(mappedBy = "empRoles")
-	private List<Employee> roleEmployees = new ArrayList<Employee>();
+	private List<Employee> roleEmployees = new ArrayList<>();
 }
